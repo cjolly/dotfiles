@@ -38,7 +38,6 @@ BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
 
-# My Old Junk
 # http://pastie.org/pastes/165446
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -48,4 +47,6 @@ function parse_git_branch {
 # Note that the git branch is given a special color
 # PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n→ "
 # PS1="\n\u:\w \[$EBLACK\]\$(parse_git_branch)\[$NO_COLOR\]\n> "
-PS1="\[$NO_COLOR\]\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
+# PS1="\[$NO_COLOR\]\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
+# PS1="\[$NO_COLOR\]\u@\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
+PS1="\n\[$ECYAN\]\u@\h:\[$EBLACK\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
