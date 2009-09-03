@@ -38,37 +38,14 @@ BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
 
-# Update the command prompt to be <user>:<current_directory>(git_branch) >
-# Note that the git branch is given a special color
-# PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n→ "
-# PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n> "
-
 # My Old Junk
 # http://pastie.org/pastes/165446
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-function proml {
-  local        BLUE="\[\033[0;34m\]"
-  local         RED="\[\033[0;31m\]"
-  local   LIGHT_RED="\[\033[1;31m\]"
-  local       GREEN="\[\033[0;32m\]"
-  local LIGHT_GREEN="\[\033[1;32m\]"
-  local       WHITE="\[\033[1;37m\]"
-  local  LIGHT_GRAY="\[\033[0;37m\]"
-  case $TERM in
-    xterm*)
-    TITLEBAR='\[\033]0;\u@\h:\w\007\]'
-    ;;
-    *)
-    TITLEBAR=""
-    ;;
-  esac
-
-PS1="${TITLEBAR}\
-$GREEN\h:$RED\w$WHITE\$(parse_git_branch)$GREEN\$ "
-PS2='> '
-PS4='+ '
-}
-proml
+# Update the command prompt to be <user>:<current_directory>(git_branch) >
+# Note that the git branch is given a special color
+# PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n→ "
+# PS1="\n\u:\w \[$EBLACK\]\$(parse_git_branch)\[$NO_COLOR\]\n> "
+PS1="\[$NO_COLOR\]\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
