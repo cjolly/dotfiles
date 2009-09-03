@@ -1,2 +1,9 @@
 alias ls='ls -G'
 alias ll='ls -hFla'
+
+# Processes
+alias tu='top -o cpu'   # top sorted by CPU
+alias tm='top -o vsize' # top sorted by Memory
+
+# History
+alias h='history'
