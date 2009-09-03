@@ -49,4 +49,5 @@ function parse_git_branch {
 # PS1="\n\u:\w \[$EBLACK\]\$(parse_git_branch)\[$NO_COLOR\]\n> "
 # PS1="\[$NO_COLOR\]\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
 # PS1="\[$NO_COLOR\]\u@\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
-PS1="\n\[$ECYAN\]\u@\h:\[$EBLACK\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
+# PS1="\n\[$ECYAN\]\u@\h:\[$EBLACK\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
+PS1="\n\[$EBLACK\]\u@\h:\[$ECYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
