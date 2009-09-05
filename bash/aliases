@@ -7,3 +7,6 @@ alias tm='top -o vsize' # top sorted by Memory
 
 # History
 alias h='history'
+
+# Convenience
+alias cdsm='cd ~/projects/westin/servemanager'
