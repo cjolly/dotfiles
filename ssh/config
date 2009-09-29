@@ -2,17 +2,16 @@
 
 # Multiple host "aliases", forward agent, different username
 # and a different identity
-Host gw1 gw 216.239.225.101
-HostName 216.239.225.101
+Host somehost smh 192.168.0.100
+HostName 192.168.0.100
 ForwardAgent yes
-User cjolly
-Port 23
-IdentityFile ~/.ssh/westin_id_rsa
+User username
+Port 22
+IdentityFile ~/.ssh/someother_id_rsa
 
 # Gateway Proxy
-Host sm1
-HostName sm-front-1
+Host serverbehindgateway
+HostName serverbehindgateway
 ForwardAgent yes
-User cjolly
-IdentityFile ~/.ssh/westin_id_rsa
-ProxyCommand ssh gw1 nc %h %p
+User username
+ProxyCommand ssh gateway nc %h %p
