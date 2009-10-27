@@ -14,4 +14,4 @@ Host serverbehindgateway
 HostName serverbehindgateway
 ForwardAgent yes
 User username
-ProxyCommand ssh gateway nc %h %p
+ProxyCommand ssh gateway nc %h %p -w1
