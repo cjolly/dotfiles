@@ -51,3 +51,13 @@ function parse_git_branch {
 # PS1="\[$NO_COLOR\]\u@\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
 # PS1="\n\[$ECYAN\]\u@\h:\[$EBLACK\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
 PS1="\n\[$NO_COLOR\]\u@\h:\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
+
+# If this is an xterm set the title to user@host
+# stolen from Ubuntu
+# case "$TERM" in
+# xterm*|rxvt*)
+#     PS1="\[\e]0;\u@\h\]$PS1"
+#     ;;
+# *)
+#     ;;
+# esac
