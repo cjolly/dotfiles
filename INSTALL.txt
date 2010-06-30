@@ -1,5 +1,5 @@
 cd ~
-rm .bashrc .profile
+rm .bashrc .profile .bash_profile
 ln -s bin/dotfiles/bashrc .bashrc
 ln -s bin/dotfiles/bash_profile .bash_profile
 ln -s bin/dotfiles/vimrc .vimrc
