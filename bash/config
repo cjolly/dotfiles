@@ -50,11 +50,11 @@ function parse_git_branch {
 # PS1="\[$NO_COLOR\]\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
 # PS1="\[$NO_COLOR\]\u@\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
 # PS1="\n\[$ECYAN\]\u@\h:\[$EBLACK\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
-# PS1="\n\[$NO_COLOR\]\u@\h:\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n\$(~/.rvm/bin/rvm-prompt i v g) → "
+PS1="\n\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n\$(~/.rvm/bin/rvm-prompt i v g s) → "
 
 # chad@somerset:~/projects/westin/lawgical_admin(master)
 # →
-PS1="\n\[$NO_COLOR\]\u@\h:\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
+# PS1="\n\[$NO_COLOR\]\u@\h:\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
 
 # If this is an xterm set the title to user@host
 # stolen from Ubuntu
