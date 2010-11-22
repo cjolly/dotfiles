@@ -8,12 +8,6 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-# print SQL to STDOUT in rails console
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
-end
-
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
@@ -29,3 +23,13 @@ end
 def paste
   `pbpaste`
 end
+
+def copy_history
+  history = Readline::HISTORY.entries
+  index = history.rindex("exit") || -1
+  content = history[(index+1)..-2].join("\n")
+  puts content
+  copy content
+end
+
+load File.dirname(__FILE__) + '/.railsrc' if ($0 == 'irb' || $0 == 'script/rails') && (defined?(Rails) || ENV['RAILS_ENV'])
