@@ -1,3 +1,6 @@
+# Bash Prompt HOWTO
+# http://tldp.org/HOWTO/Bash-Prompt-HOWTO/
+
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
 # misc
 NO_COLOR='\e[0m' #disable any colors
@@ -43,25 +46,6 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-# Update the command prompt to be <user>:<current_directory>(git_branch) >
-# Note that the git branch is given a special color
-# PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n→ "
-# PS1="\n\u:\w \[$EBLACK\]\$(parse_git_branch)\[$NO_COLOR\]\n> "
-# PS1="\[$NO_COLOR\]\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
-# PS1="\[$NO_COLOR\]\u@\h:\[$RED\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
-# PS1="\n\[$ECYAN\]\u@\h:\[$EBLACK\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
+# ~/projects/fun/repo(master)
+# ruby 1.9.2@global →
 PS1="\n\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n\$(~/.rvm/bin/rvm-prompt i v g s) → "
-
-# chad@somerset:~/projects/westin/lawgical_admin(master)
-# →
-# PS1="\n\[$NO_COLOR\]\u@\h:\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n→ "
-
-# If this is an xterm set the title to user@host
-# stolen from Ubuntu
-# case "$TERM" in
-# xterm*|rxvt*)
-#     PS1="\[\e]0;\u@\h\]$PS1"
-#     ;;
-# *)
-#     ;;
-# esac
