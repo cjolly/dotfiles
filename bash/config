@@ -46,6 +46,16 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+# xterm titlebar
+case $TERM in
+    xterm*|rxvt*)
+        TITLEBAR='\[\033]0;\W\007\]'
+        ;;
+    *)
+        TITLEBAR=""
+        ;;
+esac
+
 # ~/projects/fun/repo(master)
 # ruby 1.9.2@global →
-PS1="\n\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n\$(~/.rvm/bin/rvm-prompt i v g s) → "
+PS1="$TITLEBAR\n\[$CYAN\]\w\[$WHITE\]\$(parse_git_branch)\[$NO_COLOR\]\n\$(~/.rvm/bin/rvm-prompt i v g s) → "
