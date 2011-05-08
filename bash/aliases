@@ -10,3 +10,4 @@ alias h='history'
 
 # Convenience
 alias cdsm='cd ~/projects/westin/servemanager'
+alias open-gem='EDITOR=mate bundle open $1'
