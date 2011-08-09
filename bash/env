@@ -1,3 +1,2 @@
-export PATH=~/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql84/bin:$PATH
+export PATH=~/bin:/usr/local/bin:$PATH
 export EDITOR=vim
-export MANPATH=/usr/local/man:$MANPATH
