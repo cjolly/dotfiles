@@ -1,1 +1,1 @@
-source $DOTFILES/bash/completion_scripts/git_completion.bash
+source $DOTFILES/bash/completion_scripts/git-completion.bash
