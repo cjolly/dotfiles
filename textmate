@@ -1,0 +1,8 @@
+# File > Preferences > Folder References
+# Ideas from: https://gist.github.com/728445
+
+# Original Folder Pattern
+!(/\.(?!htaccess)[^/]*|\.(tmproj|o|pyc)|/Icon\r|/svn-commit(\.[2-9])?\.tmp)$
+
+# Original Folder Pattern
+!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$
