@@ -53,4 +53,4 @@ esac
 
 # ~/projects/fun/repo(master)
 # ruby 1.9.2@global →
-PS1="$TITLEBAR\n\[$CYAN\]\w\[$WHITE\]\$(__git_ps1 '(%s)')\[$NO_COLOR\]\n\$(~/.rvm/bin/rvm-prompt i v g s) → "
+PS1="$TITLEBAR\n\[$CYAN\]\w\[$WHITE\]\$(__git_ps1 '(%s)')\[$NO_COLOR\]\n\$(rbenv version-name) → "

@@ -1,7 +1,7 @@
-export DOTFILES=~/bin/dotfiles
+DOTFILES=~/bin/dotfiles
 
 source $DOTFILES/bash/env
-source $DOTFILES/bash/config
 source $DOTFILES/bash/aliases
 source $DOTFILES/bash/completions
-source $DOTFILES/bash/rvm
+source $DOTFILES/bash/path
+source $DOTFILES/bash/prompt
