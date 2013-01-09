@@ -1,5 +1,10 @@
-git_completion_script = "/usr/local/etc/bash_completion.d/git-completion.bash"
+function __include_git_completion_script ()
+{
+  local git_completion_script="/usr/local/etc/bash_completion.d/git-completion.bash"
 
-if [ -f  git_completion_script ]; then
-  source git_completion_script
-fi
+  if [ -f  $git_completion_script ]; then
+    source $git_completion_script
+  fi
+}
+
+__include_git_completion_script
