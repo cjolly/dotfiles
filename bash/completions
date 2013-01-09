@@ -1,1 +1,5 @@
-source $DOTFILES/bash/completion_scripts/git-completion.bash
+git_completion_script = "/usr/local/etc/bash_completion.d/git-completion.bash"
+
+if [ -f  git_completion_script ]; then
+  source git_completion_script
+fi
