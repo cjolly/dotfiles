@@ -7,15 +7,15 @@ then
   eval "$(rbenv init -)";
 fi
 
+# project binstubs
+export PATH="./bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# project level binstubs take precedence
-export PATH="./bin:$PATH"
-
 # PATH search order
-# 1. project binstubs
-# 2. heroku Toolbelt
+# 1. heroku Toolbelt
+# 2. project binstubs
 # 3. rbenv shims
 # 4. home dir bin
 # 5. homebrew
