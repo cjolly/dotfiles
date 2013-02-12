@@ -4,3 +4,7 @@ export NODE_PATH=/usr/local/share/npm/lib/node_modules
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
+
+export HISTFILESIZE=
+export HISTSIZE=
+
