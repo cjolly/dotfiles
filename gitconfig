@@ -1,0 +1,17 @@
+[user]
+	name = Chad Jolly
+	email = cjolly@lawgical.com
+[color]
+	ui = true
+[core]
+	autocrlf = false
+[alias]
+	st = status -sb
+	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+	co = checkout
+	standup = log --since '1 day ago' --oneline --author cjolly@lawgical.com
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	ds = diff --staged
+	undo = reset --soft HEAD^
+  latest = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+
