@@ -14,4 +14,9 @@
 	ds = diff --staged
 	undo = reset --soft HEAD^
   latest = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+  undeployed = log --pretty=format:\"%h %an: %s\" --abbrev-commit  heroku-pro/master..pro
 
+[pull]
+	rebase = true
+[push]
+	default = current
