@@ -11,4 +11,4 @@ alias r='fc -s'
 
 # Convenience
 alias cdsm='cd ~/projects/westin/servemanager'
-alias open-gem='EDITOR=mate bundle open $1'
+alias open-gem='EDITOR=subl bundle open $1'
