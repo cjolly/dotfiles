@@ -1,7 +1,0 @@
-puts "Logging ActiveRecord SQL to console"
-if defined?(Rails) # Rails 3
-  ActiveRecord::Base.logger = Logger.new(STDOUT)
-else
-  require 'logger'
-  Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT)) if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-end

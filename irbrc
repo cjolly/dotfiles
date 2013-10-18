@@ -32,4 +32,3 @@ def copy_history
   copy content
 end
 
-load File.dirname(__FILE__) + '/.railsrc' if ($0 == 'irb' || $0 == 'script/rails') && (defined?(Rails) || ENV['RAILS_ENV'])
