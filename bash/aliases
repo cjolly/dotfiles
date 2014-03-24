@@ -1,14 +1,16 @@
-alias ls='ls -G'
-alias ll='ls -hFla'
-
-# Processes
-alias tu='top -o cpu'   # top sorted by CPU
-alias tm='top -o vsize' # top sorted by Memory
+# ls
+#   -G enables colorized output
+#   -F show trailing slash after dirs
+#   -h human readable file size
+alias ls='ls -GF'
+alias ll='ls -hla'
 
 # History
 alias h='history'
+
+# Rerun command from history
+# r 536
 alias r='fc -s'
 
 # Convenience
-alias cdsm='cd ~/projects/westin/servemanager'
 alias open-gem='EDITOR=subl bundle open $1'
