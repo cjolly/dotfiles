@@ -10,3 +10,8 @@ HISTFILESIZE=1000
 HISTTIMEFORMAT='%F %T '
 HISTCONTROL=ignoredups
 HISTIGNORE=exit
+
+# Customize colorized output from ls
+# http://geoff.greer.fm/lscolors/
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagacad
