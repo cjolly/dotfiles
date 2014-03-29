@@ -12,5 +12,3 @@ alias h='history'
 # r 536
 alias r='fc -s'
 
-# Convenience
-alias open-gem='EDITOR=subl bundle open $1'

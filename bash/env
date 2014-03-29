@@ -1,4 +1,6 @@
-export EDITOR=vim
+export EDITOR=subl
+export BUNDLER_EDITOR=subl
+export GIT_EDITOR=vim
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
