@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Run simple web server in current dir
+# usage: web PORT # defaults to 8000
+
+python -m SimpleHTTPServer $1
