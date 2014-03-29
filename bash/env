@@ -6,12 +6,15 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 
-# http://www.gnu.org/software/bash/manual/html_node/Bash-History-Facilities.html
-HISTSIZE=4096
-HISTFILESIZE=4096
-HISTTIMEFORMAT='%F %T '
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT='%F %T '
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
 HISTCONTROL=ignoredups
-HISTIGNORE=exit
 
 # Customize colorized output from ls
 # http://geoff.greer.fm/lscolors/
