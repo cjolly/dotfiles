@@ -1,4 +1,4 @@
-DOTFILES=~/bin/dotfiles
+DOTFILES=~/.dotfiles
 
 source $DOTFILES/bash/env
 source $DOTFILES/bash/aliases

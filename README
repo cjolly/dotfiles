@@ -1,8 +1,0 @@
-cd ~
-rm .bashrc .profile .bash_profile
-ln -s bin/dotfiles/bashrc .bashrc
-ln -s bin/dotfiles/bash_profile .bash_profile
-ln -s bin/dotfiles/vimrc .vimrc
-ln -s bin/dotfiles/vim .vim
-ln -s bin/dotfiles/irbrc .irbrc
-ln -s bin/dotfiles/gemrc .gemrc
