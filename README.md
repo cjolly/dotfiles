@@ -11,6 +11,10 @@ git clone git@github.com:cjolly/dotfiles.git .dotfiles
 rcup -d .dotfiles -x ssh -x bash -x README.md -x bin
 ```
 
+## Inspiration
+
+* [github's dotfiles](http://dotfiles.github.io/)
+
 ## Shit I can never remember
 
 ENV stuff
