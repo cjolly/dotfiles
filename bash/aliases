@@ -11,6 +11,7 @@ alias -- -="cd -"
 #   -h human readable file size
 alias ls='ls -GF'
 alias ll='ls -hla'
+alias lsd="ls -lFG | grep --color=never '^d'"
 
 alias g="git"
 
