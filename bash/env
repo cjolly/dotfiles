@@ -1,5 +1,4 @@
 export EDITOR=vim
-export NODE_PATH=/usr/local/share/npm/lib/node_modules
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
