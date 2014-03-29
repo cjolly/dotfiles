@@ -54,6 +54,6 @@ esac
 # Git Prompt
 source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 
-# ~/projects/fun/repo(master)
-# ruby 1.9.2@global →
-PS1="$TITLEBAR\n\[$CYAN\]\w\[$WHITE\]\$(__git_ps1 '(%s)')\[$NO_COLOR\]\n\$(rbenv version-name) → "
+# repo(current-branch)
+# >
+PS1="$TITLEBAR\n\[$CYAN\]\W\[$WHITE\]\$(__git_ps1 '(%s)')\[$WHITE\]\n>\[$NO_COLOR\] "
