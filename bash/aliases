@@ -12,6 +12,8 @@ alias -- -="cd -"
 alias ls='ls -GF'
 alias ll='ls -hla'
 
+alias g="git"
+
 # History
 alias h='history'
 
