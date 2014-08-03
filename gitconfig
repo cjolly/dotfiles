@@ -13,13 +13,18 @@
 	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	ds = diff --staged
 	undo = reset --soft HEAD^
-  latest = for-each-ref --count=10 --sort=-committerdate refs/heads/ refs/remotes/origin --format='%(refname:short)'
+  latest = for-each-ref --count=20 --sort=-committerdate refs/heads/ refs/remotes/origin --format='%(refname:short)'
   undeployed = log --pretty=format:\"%h %an: %s\" --abbrev-commit  production/master..master
 
 [pull]
 	rebase = true
 [push]
 	default = current
+[grep]
+  lineNumber = true
+[fetch]
+  prune = true
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
