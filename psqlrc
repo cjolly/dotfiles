@@ -3,10 +3,8 @@
 \set VERBOSITY default
 \set PROMPT1 '%[%033[1m%]%M/%/%R%[%033[0m%]%# '
 \set PROMPT2 '%R%# '
-
-\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTFILE ~/.psql_history/:DBNAME
 \set HISTCONTROL ignoredups
 \set HISTSIZE
 \set HISTFILESIZE
-
 \pset null '[NULL]'
