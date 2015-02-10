@@ -6,6 +6,7 @@
 [core]
 	autocrlf = false
 [alias]
+  fp  = fetch -p
 	st = status -sb
 	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
 	co = checkout
@@ -29,3 +30,5 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[heroku]
+	account = lawgical
