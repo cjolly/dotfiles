@@ -1,4 +1,4 @@
-\timing on
+-- \timing on
 \x auto
 \set VERBOSITY default
 \set PROMPT1 '%[%033[1m%]%M/%/%R%[%033[0m%]%# '
