@@ -36,3 +36,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Show all DNS records for domain
+alias dns="dig +nocmd any +multiline +noall +answer"
