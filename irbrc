@@ -32,3 +32,4 @@ def copy_history
   copy content
 end
 
+ActiveResource::Base.logger = ActiveRecord::Base.logger if defined? ActiveResource
