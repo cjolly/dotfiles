@@ -4,7 +4,7 @@
 [color]
 	ui = true
 [core]
-	autocrlf = false
+	autocrlf = input
 [alias]
   fp  = fetch -p
 	st = status -sb
@@ -32,3 +32,11 @@
 	smudge = git media smudge %f
 [heroku]
 	account = lawgical
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
