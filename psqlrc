@@ -1,3 +1,6 @@
+
+set timezone = 'America/Denver';
+
 -- \timing on
 \x auto
 \set VERBOSITY default
