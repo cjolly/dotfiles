@@ -39,3 +39,6 @@ alias reload="exec $SHELL -l"
 
 # Show all DNS records for domain
 alias dns="dig +nocmd any +multiline +noall +answer"
+
+# Open all files on a branch that have been modified from master
+alias ae='atom $(git diff --name-only  master)'
