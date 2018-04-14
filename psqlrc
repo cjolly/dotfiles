@@ -8,6 +8,6 @@ set timezone = 'America/Denver';
 \set PROMPT2 '%R%# '
 \set HISTFILE ~/.psql_history/:DBNAME
 \set HISTCONTROL ignoredups
-\set HISTSIZE
+\set HISTSIZE -1
 \set HISTFILESIZE
 \pset null '[NULL]'
