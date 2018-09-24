@@ -12,11 +12,7 @@ eval "$(~/projects/lawgical/scripts/bin/law init -)";
 # project binstubs
 export PATH="./bin:$PATH"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # PATH search order
-# 1. heroku Toolbelt
 # 2. project binstubs
 # 3. rbenv shims
 # 4. home dir bin
