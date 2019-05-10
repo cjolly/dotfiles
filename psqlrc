@@ -1,13 +1,24 @@
-
+\set QUIET 1
 set timezone = 'America/Denver';
 
--- \timing on
 \x auto
 \set VERBOSITY default
-\set PROMPT1 '%[%033[1m%]%M/%/%R%[%033[0m%]%# '
-\set PROMPT2 '%R%# '
 \set HISTFILE ~/.psql_history/:DBNAME
 \set HISTCONTROL ignoredups
 \set HISTSIZE -1
 \set HISTFILESIZE
 \pset null '[NULL]'
+
+SELECT CASE
+  WHEN (SELECT TRUE FROM pg_user WHERE usename='cjolly')
+    THEN '%[%033[0;32m%][DEV]%[%033[0m%] %/%# '
+  WHEN (SELECT pg_is_in_recovery())
+    THEN '%[%033[0;33m%][FOLLOWER]%[%033[0m%] %/%# '
+  ELSE '%[%033[0;31m%][PRODUCTION]%[%033[0m%]% %/%# '
+
+END AS "PROMPT1" \gset
+
+\set PROMPT2 '%R%#> '
+
+\timing on
+\set QUIET 0
