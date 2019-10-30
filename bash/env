@@ -19,3 +19,6 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 # http://geoff.greer.fm/lscolors/
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+# Silence zsh message https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
+export BASH_SILENCE_DEPRECATION_WARNING=1
